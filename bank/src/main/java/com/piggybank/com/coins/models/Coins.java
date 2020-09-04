@@ -76,4 +76,28 @@ public class Coins
         this.quantity = quantity;
     }
 
+    public double getTotalValue()
+    {
+        double totalValue = this.value * (int)this.quantity;
+        return totalValue;
+    }
+
+    public boolean needPluralNames()
+    {
+        boolean plural = quantity > 1;
+        return plural;
+    }
+
+    @Override
+    public String toString()
+    {
+        if(needPluralNames())
+        {
+            return quantity + " " + nameplural;
+        }
+        else
+        {
+            return quantity + " " + name;
+        }
+    }
 }

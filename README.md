@@ -23,9 +23,29 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how you took advantage of Java's Object Oriented approach to solve the sprint challenge.
+
+  By building different methods into the Coins class I was able to do tests on the values to save time on printing to the console later. To make sure that Postman was communicating correctly I was easily able to build in a get all method for the CoinsController Class.
+
 2. Explain the three steps needed to run a Java application (using the JDK) including what each step does and how those step correlate to running a JavaScript application.
+
+  javac --- Compiling into bytecode
+  jar cvfe --- "Creating a workable jar"
+  java -jar --- Running the actual jar or java archive.
+
 3. Explain how Java being a strongly typed language affected you solution.
+
+  I personally like the strongly typed language in that I can easily keep track of what kind of data type I'm using. It addas an extra step when setting up variables, but in the long run saves times on trying to debug code. 
+
 4. Can you explain the differences between Abstract Classes and Interfaces including how they are used in your application?
+
+  Abstract Classes: extends classes, instance methods that implement default behaviors
+
+  Used an abstract class in that each of the coins have default behaviors that can be assigned just by creating a coin. Each coin will have a value, a total when getting the product of quantity, and value, etc. However each individual coin would have their own methods when coming down to particulars. For example, two nickels could equate to a dime, just as five pennies could equate to a nickel, or ten pennies coud equate to a dime. Those methods would be specific to each individual coin.
+
+  Interfaces: cannot have implementations, static variables
+
+  Just one main example, but overriding the toString method with a dynamic string depending on the quantity of coins in a specific entry, 
+
 
 ## Instructions
 

@@ -32,4 +32,34 @@ public class CoinsController
         }
         return new ResponseEntity<>( myList, HttpStatus.OK);
     }
+
+    // http://localhost:2019/total
+
+    /*
+    1 Quarter
+    1 Dime
+    5 Dollars
+    3 Nickels
+    7 Dimes
+    1 Dollar
+    10 Pennies
+    The piggy bank holds 7.3
+    */
+
+    @GetMapping(value = "/total", produces = {"application/json"})
+    public ResponseEntity<?> piggyBankDisplay()
+    {
+        ArrayList<Coins> myList = new ArrayList<>();
+        coinsrepos.findAll().iterator().forEachRemaining(myList::add);
+
+        double total = 0.0;
+
+        for (Coins c : myList)
+        {
+            System.out.println(c);
+            total = total + c.getTotalValue();
+        }
+        System.out.println("The Piggy Bank Holds " + total);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
